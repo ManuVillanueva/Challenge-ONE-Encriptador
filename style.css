@@ -1,4 +1,5 @@
 body {
+    background: blue;
     margin: 0;
     padding: 0;
     background: #E5E5E5;
@@ -62,7 +63,7 @@ body {
     display: inline-block;
     width: 40%;
     height: auto;
-    margin: 0 0 20px 0;   
+    margin: 0 0 30% 0;   
 }
 
 #kid-img {
@@ -88,6 +89,7 @@ body {
 }
 
 .btn3 {
+    background: yellow;
     display: inline-block;
     padding: 24px;
     width: 30%;
@@ -96,3 +98,4 @@ body {
     border-radius: 24px;
     margin-left: 30%;
 }
+
