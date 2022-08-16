@@ -11,9 +11,23 @@ la letra "u" tiene que ser convertida a "ufat";
 Ademas solo deebe funcionar con letras minúsculas,
 tampoco tienen que tener tilde, ni caracteres especiales*/
 
-var textoIngresado = [];
 
-function encriptar() {
-    
-    
+let textoIngresado = "holA buenos dias";
+
+function splitArr(texto) {
+
+    let arrayText = textoIngresado.split("");
+    console.log(arrayText);
+ 
 }
+
+function mayusYCaract() {
+
+    let incluyeMayusYCaract = splitArr().includes("QWERTYUIIOPASDFGHJKLÑZXCVBNM,.-+!·$%&/()=?¿ª");
+
+    console.log(mayusYCaract);
+}
+
+console.log(splitArr(textoIngresado));
+
+console.log(mayusYCaract);
