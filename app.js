@@ -18,7 +18,7 @@ let textoValido = false;
 //Función que guarda el texto introducido y evalua que no tenga mayusculas, ni caracteres especiales
 function validarTexto() {
 
-    let textoIngresado = document.getElementsByClassName("textarea1");
+    let textoIngresado = document.querySelector(".textarea1").value;
 
     if (/[~!@#$%^&*()_+|}{[\]\\\/?><:"`;.,áéíóúàèìòù']/.test(textoIngresado) || 
     (/[0-9]/.test(textoIngresado)) || 
@@ -41,11 +41,20 @@ function validarTexto() {
 
 }
 
+//Funciones para capturar el click de los botones
+function btnEncriptar() {
+
+    
+}
+
+function btnDesencriptar() {
+
+}
 
 //Función que cambia los valores de los elementos del input
 function encriptar() {
 
-    let textoIngresado = document.getElementsByClassName("textarea1");
+    let textoIngresado = document.querySelector(".textarea1").value;
 
     let textoEncriptado = "";
 
@@ -88,7 +97,7 @@ function encriptar() {
 //Función que reemplaza los elementos previamente cambiado con la función encriptar, para volver a dejarlo como estaba
 function desencriptar() {
 
-    let textoIngresado = document.getElementsByClassName(".textarea2");
+    let textoIngresado = document.querySelector(".textarea2").value;
 
     let textoDesencriptado = "";
 
