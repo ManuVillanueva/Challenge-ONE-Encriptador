@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #D8DFE8;
+    background: linear-gradient(360deg, white, #D8DFE8);
 }
 
 header {
@@ -46,21 +46,25 @@ section {
     height: 60%;
     margin-top: 20px;
     padding-top: 20px;
-    display: block;
-    margin: auto;
+    display: inline-block;
+    margin: 0 40%;
     border-radius: 10px;
     resize: none;
     border: none;
     outline: none;
+    box-shadow: 10px 10px 10px #ccc;
+    font-size: 18px;
 }
 
 .rule {
-    font-size: 12px;
+    font-size: 15px;
 }
 
 .container-button {
     text-align: center;
     margin-top: 20px;
+    margin-left: 15%;
+    width: 100%;
 }
 
 .container-button, p {
@@ -76,11 +80,23 @@ section {
     border-radius: 24px;
     background: #0A3871;
     color: #D8DFE8;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+.btn-1:hover {
+    transform: scale(1.05);
 }
 
 .btn-2 {
     border-radius: 24px;
     background: #D8DFE8;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+.btn-2:hover {
+    transform: scale(1.05);
 }
 
 .section2 {
@@ -92,23 +108,46 @@ section {
     overflow: hidden;
 }
 
+.container-textarea {
+    display: block;
+}
+
+.imagen-persona {
+    width: 15%;
+    position: absolute;
+    margin: 8em 0 2em 15em;
+}
+
 .textarea2 {
     width: 50%;
     height: 60%;
     padding-top: 20px;
-    display: block;
-    margin: auto;
+    display: inline-block;
+    margin: 0 20%;
     border-radius: 10px;
     resize: none;
     border: none;
     outline: none;
+    box-shadow: 10px 10px 10px #ccc;
+    font-size: 18px;
 }
 
+.texto-textarea {
+    display: inline-block;
+    width: 20%;
+    position: absolute;
+    text-align: center;
+    margin-top: 22%;
+    margin-left: 8.5%;
+    text-shadow: 1px 1px 1px grey;
+}
 
 .container-btn3 {
     text-align: center;
-    margin-top: 3.5em;
+    margin-top: 6%;
     height: 6em;
+    display: inline-block;
+    width: 100%;
 }
 
 .btn-3 {
@@ -116,6 +155,12 @@ section {
     height: 40%;
     border-radius: 24px;
     background: #D8DFE8;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+.btn-3:hover {
+    transform: scale(1.05);
 }
 
 footer {
