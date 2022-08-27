@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta>
     <link rel="stylesheet" href="style.css">
-    <title>Encriptador - First Challenge Alura and Oracle</title>     
+    <title>Encriptador - First Challenge Alura and Oracle</title>
+    <link rel="icon" type="image/logo" href="/Resources/diamod.png">     
   </head>
   <body>
     <header>
@@ -18,8 +19,8 @@
         <textarea class="textarea1" rows="30" cols="40" placeholder="Ingrese su texto aquí"></textarea>
         <div class="container-button">
           <p class="rule">&#10071 Solo letras minúsculas y sin tildes.</p>
-          <button class="btn-1">Encriptar</button>
-          <button class="btn-2">Desencriptar</button>
+          <button class="btn-1" onclick="btnEncriptar()">Encriptar</button>
+          <button class="btn-2" onclick="btnDesencriptar()">Desencriptar</button>
         </div>
       </section>
       <!--right side-->
@@ -30,7 +31,7 @@
           <textarea class="textarea2" rows="30" cols="40"></textarea>
         </div>
         <div class="container-btn3">
-          <button class="btn-3">Copiar</button>
+          <button class="btn-3" onclick="copiar()">Copiar</button>
         </div>
       </section>
     </main>

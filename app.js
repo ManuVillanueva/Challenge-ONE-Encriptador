@@ -14,6 +14,7 @@ tampoco tienen que tener tilde, ni caracteres especiales*/
 //Variables globalas para validar que el texto cumpla con las condiciones
 let textoValido = false;
 
+let btnCopy;
 
 //Función que guarda el texto introducido y evalua que no tenga mayusculas, ni caracteres especiales
 function validarTexto() {
@@ -44,11 +45,16 @@ function validarTexto() {
 //Funciones para capturar el click de los botones
 function btnEncriptar() {
 
-    
+    const btn = document.querySelector(".btn-1");
+
+    alert("Boton encriptar pulsado");
 }
 
 function btnDesencriptar() {
+    
+    const btn2 = document.querySelector(".btn-2");
 
+    alert("Boton desencriptar pulsado");
 }
 
 //Función que cambia los valores de los elementos del input
@@ -135,3 +141,8 @@ function desencriptar() {
     return textoDesencriptado;
 }
 
+function copiar() {
+
+    let btnCopy = document.querySelector(".btn-3");
+
+}

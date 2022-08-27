@@ -173,9 +173,10 @@ footer {
     padding-top: 1%;
 }
 
-footer, a {
-    color: #D8DFE8;
+footer a {
+    color: black;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .ocultar {
