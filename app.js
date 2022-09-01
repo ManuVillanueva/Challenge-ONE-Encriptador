@@ -14,7 +14,10 @@ tampoco tienen que tener tilde, ni caracteres especiales*/
 //Variables globalas para validar que el texto cumpla con las condiciones
 let textoValido = false;
 
-let btnCopy;
+
+let resultadoEncriptado = document.querySelector(".textarea2");
+
+let resultadoDesencriptado = document.querySelector(".textarea2");
 
 //Función que guarda el texto introducido y evalua que no tenga mayusculas, ni caracteres especiales
 function validarTexto() {
@@ -45,16 +48,33 @@ function validarTexto() {
 //Funciones para capturar el click de los botones
 function btnEncriptar() {
 
-    const btn = document.querySelector(".btn-1");
+    let btn = document.querySelector(".btn-1");
 
-    alert("Boton encriptar pulsado");
+    btn.onclick = encriptar;
+
+    ocultarImagen();
+
+    resultadoEncriptado.textContent = encriptar();
+
 }
 
 function btnDesencriptar() {
     
-    const btn2 = document.querySelector(".btn-2");
+    let btn2 = document.querySelector(".btn-2");
 
-    alert("Boton desencriptar pulsado");
+    btn2.onclick = desencriptar;
+
+    resultadoDesencriptado.textContent = desencriptar();
+}
+
+//Función que oculta la imagen del muñeco, cuando se la llama.
+function ocultarImagen() {
+
+    let munieco = document.querySelector(".imagen-persona");
+    let textoH2 = document.querySelector(".texto-textarea"); 
+
+    munieco.classList.add("ocultar");
+    textoH2.classList.add("ocultar");
 }
 
 //Función que cambia los valores de los elementos del input
@@ -143,6 +163,10 @@ function desencriptar() {
 
 function copiar() {
 
-    let btnCopy = document.querySelector(".btn-3");
+    let btnCopy = document.querySelector(".textarea2");
 
+    btnCopy.select();
+    document.execCommand("copiar");
+
+    alert("Texto copiado!");
 }
