@@ -11,13 +11,13 @@ Ademas solo deebe funcionar con letras minúsculas,
 tampoco tienen que tener tilde, ni caracteres especiales*/
 
 
-//Variables globalas para validar que el texto cumpla con las condiciones
+//Variables globales para validar que el texto cumpla con las condiciones
 let textoValido = false;
 
 
-let resultadoEncriptado = document.querySelector(".textarea2");
+const resultadoEncriptado = document.querySelector(".textarea1");
 
-let resultadoDesencriptado = document.querySelector(".textarea2");
+const resultadoDesencriptado = document.querySelector(".textarea2");
 
 //Función que guarda el texto introducido y evalua que no tenga mayusculas, ni caracteres especiales
 function validarTexto() {
@@ -45,26 +45,24 @@ function validarTexto() {
 
 }
 
-//Funciones para capturar el click de los botones
+//Funciones para capturar el click de los botones y llamar a las funciones de abajo
 function btnEncriptar() {
 
-    let btn = document.querySelector(".btn-1");
+    const botonEncriptar = encriptar(resultadoEncriptado.value);
 
-    btn.onclick = encriptar;
-
+    resultadoDesencriptado.value = botonEncriptar;
     ocultarImagen();
 
-    resultadoEncriptado.textContent = encriptar();
+    resultadoEncriptado.value = "";
 
 }
 
 function btnDesencriptar() {
     
-    let btn2 = document.querySelector(".btn-2");
+    const botonDesencriptar = desencriptar(resultadoEncriptado.value);
 
-    btn2.onclick = desencriptar;
+    resultadoDesencriptado.value = botonDesencriptar;
 
-    resultadoDesencriptado.textContent = desencriptar();
 }
 
 //Función que oculta la imagen del muñeco, cuando se la llama.
@@ -123,7 +121,7 @@ function encriptar() {
 //Función que reemplaza los elementos previamente cambiado con la función encriptar, para volver a dejarlo como estaba
 function desencriptar() {
 
-    let textoIngresado = document.querySelector(".textarea2").value;
+    let textoIngresado = document.querySelector(".textarea1").value;
 
     let textoDesencriptado = "";
 
@@ -161,12 +159,12 @@ function desencriptar() {
     return textoDesencriptado;
 }
 
+//Función que copia el valor del textarea2 y lo guarda en el portapapeles
 function copiar() {
 
-    let btnCopy = document.querySelector(".textarea2");
-
-    btnCopy.select();
-    document.execCommand("copiar");
+    resultadoDesencriptado.select();
+    navigator.clipboard.writeText(resultadoDesencriptado.value);
+    resultadoDesencriptado.value = "";
 
     alert("Texto copiado!");
 }
